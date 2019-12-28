@@ -1,8 +1,10 @@
 # Synopsis
 
 - Official : https://docs.opencv.org/4.2.0/d7/d9f/tutorial_linux_install.html
-- Build opencv in Debian & install gocv to operate it.
-- Please make sure the opencv version before you use it.
+- Build opencv in Debian & use gocv to operate it.
+	- You could build your app(bin) to work with OpenCV.
+	- This repo only supply `./bin/showimg` to help me verify it is workable.
+- Please make sure the OpenCV version before you build your own app to work with OpenCV.
 
 # install issue
 ## Can't generate Makefile
