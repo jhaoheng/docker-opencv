@@ -38,3 +38,5 @@ RUN rm ${HOME}/*.zip && cd ${HOME}/opencv-* && \
     make -j7 && \
     make install && \
     ldconfig
+
+RUN printf "This OpenCV VERSION Is => " && opencv_version

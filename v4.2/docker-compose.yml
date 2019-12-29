@@ -1,12 +1,13 @@
 version: "3.7"
 services: 
-  app:
+  opencv:
     build: .
-    image: opencv
+    image: opencv:v4.2
     container_name: opencv
     environment: 
       - DISPLAY=docker.for.mac.host.internal:0
     volumes:
       - ../imgs:/home/imgs
-      - ../bin:/go/bin
+      - ../app:/go/app
+    working_dir: /go/app
     tty: true
