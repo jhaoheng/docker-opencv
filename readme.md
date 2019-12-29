@@ -28,6 +28,6 @@
 4. RUN  
     - `docker-compose up -d`
     - `docker exec -it opencv /bin/bash`
-    - `showimage /home/imgs/bona.jpg`
+    - `showimg /home/imgs/bona.jpg`
 
 ![final](./asserts/final.png)
