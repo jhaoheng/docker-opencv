@@ -12,10 +12,12 @@
 package main
 
 import (
+	"bytes"
+	"encoding/base64"
 	"fmt"
-	"os"
-
 	"gocv.io/x/gocv"
+	"image/jpeg"
+	"os"
 )
 
 func main() {
@@ -37,4 +39,19 @@ func main() {
 			break
 		}
 	}
+
+}
+
+/*
+output base64 string and could use with below url
+https://codebeautify.org/base64-to-image-converter
+*/
+func MatToB64(Mat gocv.Mat) {
+	ti, _ := Mat.ToImage()
+	buf := new(bytes.Buffer)
+	jpeg.Encode(buf, ti, nil)
+	send_s3 := buf.Bytes()
+
+	pic := base64.StdEncoding.EncodeToString(send_s3)
+	fmt.Println(pic)
 }
